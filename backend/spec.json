@@ -1,0 +1,314 @@
+{
+  "brand": {
+    "name": "飞草",
+    "full": "飞草种草电商",
+    "tagline": "先种草 · 后下单",
+    "port": 8110
+  },
+  "tables": [
+    {
+      "name": "notes",
+      "label": "种草笔记",
+      "fields": [
+        {
+          "name": "title",
+          "label": "标题",
+          "type": "text"
+        },
+        {
+          "name": "author",
+          "label": "创作者",
+          "type": "text"
+        },
+        {
+          "name": "type",
+          "label": "形式",
+          "type": "text"
+        },
+        {
+          "name": "views",
+          "label": "浏览",
+          "type": "int"
+        },
+        {
+          "name": "likes",
+          "label": "点赞",
+          "type": "int"
+        },
+        {
+          "name": "grade",
+          "label": "热度",
+          "type": "text"
+        }
+      ],
+      "seed": [
+        [
+          "被同事追问链接的通勤包",
+          "飞飞不飞了",
+          "图文",
+          12000,
+          2300,
+          "爆"
+        ],
+        [
+          "租房改造 500 元预算极限",
+          "小蜗日记",
+          "图文",
+          8600,
+          1500,
+          "热"
+        ],
+        [
+          "打工人早餐 7 天不重样",
+          "阿澈",
+          "视频",
+          4200,
+          680,
+          "平"
+        ]
+      ]
+    },
+    {
+      "name": "products",
+      "label": "商品",
+      "fields": [
+        {
+          "name": "title",
+          "label": "商品名",
+          "type": "text"
+        },
+        {
+          "name": "price",
+          "label": "价格(元)",
+          "type": "number"
+        },
+        {
+          "name": "stock",
+          "label": "库存",
+          "type": "int"
+        },
+        {
+          "name": "category",
+          "label": "分类",
+          "type": "text"
+        },
+        {
+          "name": "desc",
+          "label": "描述",
+          "type": "text"
+        }
+      ],
+      "seed": [
+        [
+          "通勤托特包 米白",
+          129,
+          600,
+          "箱包",
+          "笔记同款 12L容量"
+        ],
+        [
+          "免打孔置物架 三件套",
+          49,
+          900,
+          "家居",
+          "租房神器 笔记同款"
+        ],
+        [
+          "早餐机三合一",
+          159,
+          400,
+          "小家电",
+          "7天早餐视频同款"
+        ]
+      ]
+    },
+    {
+      "name": "note_products",
+      "label": "笔记挂链",
+      "fields": [
+        {
+          "name": "note_id",
+          "label": "笔记ID",
+          "type": "int"
+        },
+        {
+          "name": "product_id",
+          "label": "商品ID",
+          "type": "int"
+        },
+        {
+          "name": "clicks",
+          "label": "点击转化",
+          "type": "int"
+        },
+        {
+          "name": "date",
+          "label": "挂链日期",
+          "type": "text"
+        }
+      ],
+      "seed": [
+        [
+          1,
+          1,
+          320,
+          "10-24"
+        ],
+        [
+          2,
+          2,
+          150,
+          "10-23"
+        ],
+        [
+          3,
+          3,
+          45,
+          "10-22"
+        ]
+      ]
+    },
+    {
+      "name": "comments",
+      "label": "评论",
+      "fields": [
+        {
+          "name": "note_id",
+          "label": "笔记ID",
+          "type": "int"
+        },
+        {
+          "name": "user",
+          "label": "用户",
+          "type": "text"
+        },
+        {
+          "name": "content",
+          "label": "评论内容",
+          "type": "text"
+        },
+        {
+          "name": "time",
+          "label": "时间",
+          "type": "text"
+        }
+      ],
+      "seed": [
+        [
+          1,
+          "路人甲",
+          "链接呢 需要同款",
+          "10-24 09:12"
+        ],
+        [
+          1,
+          "收藏家",
+          "已下单 到手追评",
+          "10-24 11:40"
+        ]
+      ]
+    },
+    {
+      "name": "cart",
+      "label": "购物车",
+      "fields": [
+        {
+          "name": "user",
+          "label": "用户",
+          "type": "text"
+        },
+        {
+          "name": "product_id",
+          "label": "商品ID",
+          "type": "int"
+        },
+        {
+          "name": "qty",
+          "label": "数量",
+          "type": "int"
+        }
+      ],
+      "seed": []
+    },
+    {
+      "name": "orders",
+      "label": "订单",
+      "fields": [
+        {
+          "name": "order_no",
+          "label": "订单号",
+          "type": "text"
+        },
+        {
+          "name": "user",
+          "label": "下单人",
+          "type": "text"
+        },
+        {
+          "name": "items",
+          "label": "商品明细",
+          "type": "text"
+        },
+        {
+          "name": "total",
+          "label": "金额(元)",
+          "type": "number"
+        },
+        {
+          "name": "address",
+          "label": "收货地址",
+          "type": "text"
+        },
+        {
+          "name": "status",
+          "label": "状态",
+          "type": "text"
+        }
+      ],
+      "seed": []
+    },
+    {
+      "name": "users",
+      "label": "用户",
+      "fields": [
+        {
+          "name": "username",
+          "label": "用户名",
+          "type": "text"
+        },
+        {
+          "name": "password",
+          "label": "密码",
+          "type": "text"
+        },
+        {
+          "name": "role",
+          "label": "角色",
+          "type": "text"
+        }
+      ],
+      "seed": [
+        [
+          "admin",
+          "admin123",
+          "admin"
+        ],
+        [
+          "ops01",
+          "ops123456",
+          "ops"
+        ],
+        [
+          "view01",
+          "view123456",
+          "viewer"
+        ],
+        [
+          "creator01",
+          "admin123",
+          "创作者"
+        ]
+      ]
+    }
+  ]
+}
