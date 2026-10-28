@@ -1,27 +1,48 @@
-# 飞草种草电商
+# 🌿 飞草种草电商 (feicao-content)
 
-> 先种草 · 后下单
+> 种草好物，发现生活之美。
 
-零依赖（Python 标准库 + SQLite）的 飞草，飞系电商系列成员。
+## ✨ 项目简介
 
-## 运行
+飞草种草是一个以内容驱动的社交电商平台，通过达人推荐、用户种草笔记、社区互动与直播带货，打造沉浸式的购物体验，让用户在发现好物的同时享受购物乐趣。
+
+## 🚀 核心特性
+
+- 📝 **内容种草** — 真实用户分享使用体验，种草优质好物
+- 🌟 **达人推荐** — KOL/KOC 专业推荐，精选好物不踩雷
+- 💬 **社区互动** — 评论、点赞、收藏，与志同道合的人交流
+- 🎥 **直播带货** — 实时直播讲解，边看边买更直观
+- 🏷️ **标签分类** — 精细化内容标签，快速发现感兴趣的好物
+- 📊 **数据驱动** — 智能推荐算法，精准匹配用户偏好
+
+## 🛠️ 快速开始
 
 ```bash
-cd backend
-python server.py
-# 访问 http://127.0.0.1:8110/ ，三角色: admin/admin123 · ops01/ops123456 · view01/view123456
+# 克隆仓库
+git clone https://github.com/dukema81/feicao-content.git
+cd feicao-content
+
+# 安装依赖
+npm install
+
+# 启动开发服务器
+npm run dev
+
+# 构建生产版本
+npm run build
 ```
 
-## 测试
+## 📦 技术栈
 
-```bash
-python -m pytest tests/ -q
-```
+- 前端框架 + UI 组件库
+- 状态管理 + 路由
+- 内容管理系统 + 富文本编辑器
+- 直播推流 + 实时互动 + 支付集成
 
-## 目录
+## 📄 许可证
 
-- backend/  通用引擎 engine.py + 规格 spec.json + 服务入口 server.py
-- frontend/ 原生 JS SPA（门店 + 统计 + 规格驱动后台）
-- tools/    专属 Logo（icon.svg）+ UI 巡检（ui_check.py，零依赖探活+截图）
-- docs/     建设方案
-- tests/    API 集成测试（真实起服务全链路断言）
+本项目基于 [MIT License](LICENSE) 开源许可协议。
+
+---
+
+Made with ❤️ by dukema81
